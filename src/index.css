@@ -461,3 +461,77 @@ body {
   .dash-main { padding: 1rem; }
   .price-row { grid-template-columns: 1fr; }
 }
+
+/* AI ADVISOR */
+.ai-promo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: linear-gradient(135deg, rgba(124,106,247,0.12), rgba(168,85,247,0.08));
+  border: 1px solid rgba(124,106,247,0.25);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.ai-promo-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.ai-promo-sub { font-size: 12px; color: var(--text2); }
+
+.ai-advisor-section { }
+.ai-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.ai-feature-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s;
+}
+.ai-feature-card:hover { border-color: rgba(124,106,247,0.3); }
+
+.ai-feature-header { display: flex; gap: 12px; align-items: flex-start; }
+.ai-feature-icon { font-size: 24px; flex-shrink: 0; }
+.ai-feature-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.ai-feature-sub { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+.ai-run-btn {
+  width: 100%;
+  padding: 10px;
+  background: rgba(124,106,247,0.12);
+  border: 1px solid rgba(124,106,247,0.25);
+  border-radius: var(--radius-sm);
+  color: #a89ff7;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s;
+}
+.ai-run-btn:hover { background: rgba(124,106,247,0.2); color: var(--text); }
+.ai-run-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.ai-result {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .ai-features-grid { grid-template-columns: 1fr; }
+  .ai-promo-banner { flex-direction: column; }
+}
